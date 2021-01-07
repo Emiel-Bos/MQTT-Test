@@ -2,7 +2,7 @@
 import paho.mqtt.client as mqtt
 
 broker = "localhost"
-topics = "topic1" 
+topics = [("topic1",1),("topic2",1),("topic3",1)] 
 
 client = mqtt.Client()
 client.connect(broker, 1883)
@@ -23,3 +23,5 @@ client.on_connect = on_connect
 client.on_message = on_message
 client.loop_forever()
 
+
+# %%
